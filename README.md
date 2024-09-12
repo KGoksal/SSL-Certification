@@ -14,14 +14,14 @@ When working with TLS certificates in Kubernetes using cert-manager, it's import
 - ClusterIssuer is a cluster-wide resource, meaning it can be used across all namespaces. This is useful when you want a single issuer to handle certificate requests for multiple namespaces.
 
 2. **Step-by-Step Setup**
-   - **Install NGINX Ingress Controller**: Deploy using Helm.
+- **Install NGINX Ingress Controller**: Deploy using Helm.
   
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx 
 helm install ingress-nginx ingress-nginx/ingress-nginx - namespace ingress-nginx - create-namespace
 ```
 
-   - **Create ClusterIssuer for Let's Encrypt**: Configure ACME server and email.
+- **Create ClusterIssuer for Let's Encrypt**: Configure ACME server and email.
 
 ```
 apiVersion: cert-manager.io/v1
@@ -44,7 +44,7 @@ spec:
 kubectl apply -f clusterissuer.yaml
 ```
      
-   - **Create a Certificate Resource**: Define and apply TLS certificate settings.
+- **Create a Certificate Resource**: Define and apply TLS certificate settings.
 
 ```
 apiVersion: cert-manager.io/v1
@@ -66,7 +66,7 @@ spec:
 kubectl apply -f certificate.yaml
 ```
     
-   - **Configure Ingress Resource**: Set up TLS and route traffic to services.
+- **Configure Ingress Resource**: Set up TLS and route traffic to services.
 
 ```
 apiVersion: networking.k8s.io/v1
