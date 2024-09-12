@@ -40,12 +40,13 @@ spec:
           class: nginx  # Make sure this matches the class of your Ingress Controller
      ```
 
-     ```
+```
      kubectl apply -f clusterissuer.yaml
-     ```
+```
      
    - **Create a Certificate Resource**: Define and apply TLS certificate settings.
-     ```
+
+```
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
@@ -59,11 +60,11 @@ spec:
   commonName: example.com  # The domain you are securing
   dnsNames:
   - example.com  # List of domains to be covered by the certificate
-     ```
+```
 
-     ```
-     kubectl apply -f certificate.yaml
-    ```
+```
+kubectl apply -f certificate.yaml
+```
     
    - **Configure Ingress Resource**: Set up TLS and route traffic to services.
 
