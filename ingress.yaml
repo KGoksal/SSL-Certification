@@ -2,23 +2,23 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: your-ingress
-  namespace: your-portfolio
+  namespace: your-portfolio  # Ensure this is the namespace where your services and Ingress are defined
   annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
-  ingressClassName: nginx
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"  # Should match the name of your ClusterIssuer
+  ingressClassName: nginx  # Ensure this matches the class name of your Ingress Controller
 spec:
   tls:
   - hosts:
-    - example.com
-    secretName: your-tls
+    - example.com  # The domain for which you want to use TLS
+    secretName: your-tls  # Must match the secret name defined in the Certificate resource
   rules:
-  - host: example.com
+  - host: example.com  # The domain to route traffic to
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: wordpress
+            name: wordpress  # Ensure this matches the name of your service
             port:
-              number: 3000
+              number: 3000  # Ensure this matches the port your service listens on
