@@ -2,12 +2,12 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: your-tls
-  namespace: your-portfolio
+  namespace: your-portfolio  # Ensure this matches the namespace where you want to store the certificate
 spec:
-  secretName: your-tls
+  secretName: your-tls  # This should be the name of the secret where the certificate will be stored
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-prod  # Must match the name of your ClusterIssuer
     kind: ClusterIssuer
-  commonName: example.com
+  commonName: example.com  # The domain you are securing
   dnsNames:
-  - example.com
+  - example.com  # List of domains to be covered by the certificate
