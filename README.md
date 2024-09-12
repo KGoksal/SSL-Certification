@@ -102,6 +102,6 @@ kubectl apply -f ingress.yaml
 ## References
 
 
-- [Setting Up Kubernetes Ingress with TLS: A Comprehensive Guide]([https://medium.com/p/2f798be9bbea/edit)
+- [Setting Up Kubernetes Ingress with TLS: A Comprehensive Guide](https://medium.com/p/2f798be9bbea/edit)
 - [NGINX Ingress Controller Documentation](https://kubernetes.github.io/ingress-nginx/)
 - [cert-manager Documentation](https://cert-manager.io/docs/)
