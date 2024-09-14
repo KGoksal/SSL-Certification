@@ -13,7 +13,7 @@ When working with TLS certificates in Kubernetes using cert-manager, it's import
 - Issuer is a namespaced resource, meaning it only operates within a specific namespace. It is suitable for situations where you need to issue certificates for resources within a single namespace.
 - ClusterIssuer is a cluster-wide resource, meaning it can be used across all namespaces. This is useful when you want a single issuer to handle certificate requests for multiple namespaces.
 
-2. **Step-by-Step Setup**
+2. **Step-by-Step Setup** 
 - **Install NGINX Ingress Controller**: Deploy using Helm.
    
 ```
