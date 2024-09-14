@@ -15,7 +15,7 @@ When working with TLS certificates in Kubernetes using cert-manager, it's import
 
 2. **Step-by-Step Setup**
 - **Install NGINX Ingress Controller**: Deploy using Helm.
-  
+   
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx 
 helm install ingress-nginx ingress-nginx/ingress-nginx - namespace ingress-nginx - create-namespace
