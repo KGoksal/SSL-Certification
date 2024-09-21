@@ -4,8 +4,7 @@
 
 This guide provides a step-by-step approach to setting up an NGINX Ingress Controller in Kubernetes and securing it with TLS using Let's Encrypt. It includes detailed instructions on configuring ClusterIssuer and Issuer, generating TLS certificates, and troubleshooting common issues.
 
-## Key Sections
-
+## Key Sections 
 
 1. **Understanding ClusterIssuer vs. Issuer**
 When working with TLS certificates in Kubernetes using cert-manager, it's important to understand the distinction between ClusterIssuer and Issuer. Both are used to define how certificates are issued, but they differ in scope and application.
