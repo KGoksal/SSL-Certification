@@ -1,4 +1,4 @@
-# Setting Up Kubernetes Ingress with TLS: A Comprehensive Guide
+# Setting Up Kubernetes Ingress with TLS: A Comprehensive Guide 
 
 ## Overview
 
